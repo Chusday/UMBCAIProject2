@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{graphicx}
+\graphicspath{{D:\AI}}
+\title{Comparing Hill Climbing, Hill Climbing with random restarts}
+\author{Dylan Chu}
+\date{March 19, 2016}
+\begin{document}
+	\maketitle
+   For this program I optimized the function in three different ways:  \[z=\frac{sin(x^2+3y^2)}{0.1+r^2}+(x^2+5y^2)*\frac{exp(1-r^2)}{2},r=\sqrt{x^2 + y^2}\]
+   \includegraphics[scale=0.5]{figure1}
+   
+   I used hill climbing, hill climbing with random restarts, and simulated annealing to find the global minimum of the function.  Simple hill climbing took the longest because the algorithm explored the whole function while saving the lowest position as a min.  This was to ensure that there was no possible lower point.  While this algorithm was accurate in finding the minimum, it was inefficient.
+   
+   Hill climbing with random restarts was a little bit more efficient.  It had a limited run-time, and would stop if it ran out of restarts.  Every time it made a move, if would roll randomly to see if it needed to restart.  If it did restart, it would go back to the previous best move and continue from there.  While this made sure it would not get stuck in any local minimums, it was limited in its amount of restarts, so it would not traverse the whole function.  
+   
+   
+   Finally the last technique was simulated annealing.  This one took the longest, but is the most applicable to more complex algorithms.  With a limited data set (-2.5,-2.5) - (2.5,2.5) the hill climbing algorithms were just fine.  But if we increased the data set to include more points, they would both become inefficient fairly quickly.  On the other hand, simulated annealing would still take about the same amount of time because it is based on temperature. Basically, the longer the algorithm runs, the less likely it is to accept bad moves.  So at the beginning it might take a bunch of bad moves, but it will become pickier and pickier as time goes on, until it just finishes and stops taking moves.  
+   
+   All of my algorithms were accurate, and hill climbing with random restarts was my fastest, but that would probably be different if we had more data points.
+   
+
+   \begin{figure}[h]
+   	\caption{The graph for hill climbing}
+   	\centering
+   	\includegraphics[scale=0.5]{figureHC}
+   \end{figure}
+   
+      \begin{figure}[h]
+      	\caption{The graph for hill climbing with random restarts}
+      	\centering
+      	\includegraphics[scale=0.5]{figureHCRR}
+      \end{figure}
+      
+         \begin{figure}[h]
+         	\caption{The graph for simulated annealing}
+         	\centering
+         	\includegraphics[scale=0.5]{figureSA}
+         \end{figure}
+
+
+\end{document}
