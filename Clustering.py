@@ -49,7 +49,7 @@ def kcluster(points, clusters):
     
 
 def main():
-    infile, clusters = processCommandLineArgs()  
+    clusters, infile = processCommandLineArgs()  
     points = readFile(infile)
     
     #these comments are left in for debugging purpose
