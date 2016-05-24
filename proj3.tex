@@ -1,0 +1,18 @@
+\documentclass{article}
+\title{Image Recognition in Python}
+\author{Dylan Chu}
+\date{May 24, 2016}
+\begin{document}
+	\maketitle
+	For this program, I had to write an image recognition program in python.  I followed this tutorial: https://pythonprogramming.net/image-recognition-python/
+	
+	
+	I approached this project first by searching the internet for information.  I found a simple tutorial at https://pythonprogramming.net/image-recognition-python/.  Once I found this tutorial, I simply followed the tutorial to finish this project.  It was very comprehensive and easy to follow.
+	
+	The tutorial approaches the problem by first converting the images into numpy arrays.  Once it does that, it takes a test set and stores the test set np arrays into a text file.  When checking for image recognition, the program checks the images, pixel by pixel, against the test set stored in the text file.  It then outputs the frequencies and captures the highest frequency.  The highest frequency is the program's guess at what the image is.  Now, this approach is not very accurate at all.  It worked for the tutorial because the tutorial used smaller images, but on our larger images, it tends to be inaccurate.  If I had to guess an accuracy rate I would probably say it's around 30%.
+	
+	Other approaches I had considered were an SVM, as well as a bunch of other image recognition packages.  However, as I had worked with numpy on previous projects, I was more comfortable using numpy arrays so I went with this tutorial.
+	
+	
+
+\end{document}
