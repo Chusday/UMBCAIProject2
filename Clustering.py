@@ -15,7 +15,7 @@ def readFile(infile):
     f=open(infile,"r")
     for line in f:
         x, y = line.split()
-        testlist.append([x,y])
+        testlist.append([int(x),int(y)])
     f.close()
     return testlist
 
